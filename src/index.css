@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  padding: 30px 50px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.header .title {
+  font-size: 24px;
+  color: red;
+}
+.result-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 30px;
+  font-size: 18px;
+}
+.result-container span {
+  padding: 0 10px;
+}
+
+.qa-part {
+  max-width: 600px;
+  margin: 50px auto;
+}
+.qa-part .question {
+  font-size: 24px;
+}
+.qa-part ul {
+  list-style: none;
+}
+.qa-part ul li {
+  padding: 10px 0;
+}
+.qa-part ul input {
+  margin-right: 8px;
+}
+
+.previous-next-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}

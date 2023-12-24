@@ -1,23 +1,29 @@
-export default QuestionPart = () => {
+export default QuestionPart = (props) => {
+  let { questionNo, data } = props;
+  let {
+    question,
+    choices = [],
+    type
+  } = data;
   return (
     <div>
       <div className="question">
-        1. is Node.js using which engine?
+        {++questionNo}, {question}
       </div>
       <div className="mca">
         <ul>
-          <li>
-            <input type="radio" name="qa" value="chakra"/>
-            Chakra from Safari
-          </li>
-          <li>
-            <input type="radio" name="qa" value="SpiderMonkey"/>
-            SpiderMonkey from Firefox
-          </li>
-          <li>
-            <input type="radio" name="qa" value="v8"/>
-            v8 from Chrome
-          </li>
+          {
+            choices.map((choice, index) => {
+              return (
+                <li key={index}>
+                  <label>
+                    <input type="radio" value={choice} name={type}/>
+                    {choice}
+                  </label>
+                </li>
+              )
+            })
+          }
         </ul>
       </div>
     </div>

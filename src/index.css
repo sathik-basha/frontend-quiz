@@ -21,7 +21,7 @@ body {
 }
 
 .qa-part {
-  max-width: 600px;
+  max-width: 700px;
   margin: 50px auto;
 }
 .qa-part .question {
@@ -35,10 +35,28 @@ body {
 }
 .qa-part ul input {
   margin-right: 8px;
+  cursor: pointer;
+}
+.qa-part label {
+  cursor: pointer;
+  display: flex;
 }
 
 .previous-next-container {
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
+}
+
+button {
+  background-color: #3b3bdf;
+  border: 0;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 17px;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
 }

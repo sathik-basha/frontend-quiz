@@ -1,22 +1,24 @@
 export default QuestionPart = (props) => {
-  let { questionNo, data } = props;
+  let { data, isOptionSelected, checkAns } = props;
   let {
     question,
-    choices = [],
-    type
+    type,
+    id,
+    answer
   } = data;
+  let choices = data.choices;
   return (
     <div>
       <div className="question">
-        {++questionNo}, {question}
+        {question}
       </div>
       <div className="mca">
         <ul>
           {
-            choices.map((choice, index) => {
+            choices.map((choice) => {
               return (
-                <li key={index}>
-                  <label>
+                <li key={id + choice}>
+                  <label className={checkAns && choice == answer ? 'text-success' : ''} onClick={() => isOptionSelected()}>
                     <input type="radio" value={choice} name={type}/>
                     {choice}
                   </label>

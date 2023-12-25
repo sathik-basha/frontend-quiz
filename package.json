@@ -2,9 +2,9 @@
   "name": "front-end-quiz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "rm -rf .parcel-cache && parcel index.html",
+    "start": "rm -rf .parcel-cache && rm -rf dist && parcel index.html",
+    "build": "rm -rf .parcel-cache && rm -rf dist && parcel build index.html",
     "test": "jest"
   },
   "keywords": [],

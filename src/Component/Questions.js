@@ -1,4 +1,4 @@
-export default QuestionPart = (props) => {
+const Questions = (props) => {
   let { data, isOptionSelected, checkAns } = props;
   let {
     question,
@@ -31,3 +31,5 @@ export default QuestionPart = (props) => {
     </div>
   )
 };
+
+export default Questions;
